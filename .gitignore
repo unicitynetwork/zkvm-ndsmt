@@ -1,0 +1,15 @@
+# Cargo build
+**/target
+
+# Cargo config
+.cargo
+**/Cargo.lock
+
+# MacOS nuisances
+.DS_Store
+
+# Proofs
+**/*.json
+
+# Env
+.env
