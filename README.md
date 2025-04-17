@@ -53,7 +53,7 @@ The elephant is the underlying hashing function.
 
 At the time of writing, SP1 has precompiles for SHA2 and SHA3/Keccak, so these are somewhat accelerated. See program output -- which precompiles (aka coprocessors, chips) are used and how many times, e.g., `... SHA_EXTEND: 3552, SHA_COMPRESS: 3552, ...`. We're using SHA2-256, which is rather slow to prove!
 
-A possible optimization is the use of specific "ZK friendly" hash functions. It works great on circuit based arithmetization, allowing direct access to computational units, or (finite) 'field elements'. On zkVM's it is nuanced. Program sees only CPU registers; to overcome it, there are some precompiles which are implemented as circuits -- thus can provide some benefit; but there is still a translation expense between 32-bit integer registers and native field elements. Range checking to detect overflows is not efficient in ZK! There are attempts with ZK friendly hash function precompiles[^3], with limited real-world effect though...
+A possible optimization is the use of specific "ZK friendly" hash functions. It works great on circuit based arithmetization, allowing direct access to computational units, or (finite) 'field elements'. On zkVM's it is nuanced. Program sees only CPU registers; to overcome it, there are some precompiles which are implemented as circuits -- thus can provide some benefit; but there is still a translation expense between 32-bit integer registers and native field elements. Range checking to detect overflows is not efficient in ZK! There are attempts with ZK friendly hash function precompiles[^4], with limited real-world effect though...
 
 
 ## More on ZK and hash functions
